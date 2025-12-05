@@ -6,6 +6,7 @@ import ClassList from '../components/ClassList';
 import { logout } from '../firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
+
 export default function TeacherDashboard() {
   const { user } = useAuth();
   const [data, setData] = useState({ name: '', journals: [], classes: [], classTimes: [] });

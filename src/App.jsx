@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
-import useAuth from './hooks/useAuth';
+import useAuth from './firebase/auth';
 import Home from './pages/Home';
 import TeacherLogin from './pages/TeacherLogin';
 import AdminLogin from './pages/AdminLogin';
 import TeacherDashboard from './pages/TeacherDashboard';
 import AdminDashboard from './pages/AdminDashboard';
+
 
 const PrivateRoute = ({ children, adminOnly = false }) => {
   const { user, isAdmin, loading } = useAuth();
